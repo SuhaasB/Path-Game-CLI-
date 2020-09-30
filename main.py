@@ -14,7 +14,13 @@ if age >=13 and age <= 80:
     if ch1 == 'a':
       ch2 = input("You followed a clear path and found the gatekeeper to the City of Holkn. Do you wish to talk(a) or sneak in(b)?\n")
 
-    elif ch == 'b':
+      if ch2 == 'a':
+        print("The gatekeeper's allow you in, but warns you not to wander after 11:00 PM.")
+        q1 = print("You enter and find a crowd gathered around in the distance, Do you want to investigate(y/N)?")
+
+        if q1 == 'y':
+
+    elif ch1 == 'b':
       ch2 = input("You found a back alley door to the City of Holkn. You sneak in and you find a drunk watching you. Do you ignore(a) or talk(b)?\n")
 
     else :
