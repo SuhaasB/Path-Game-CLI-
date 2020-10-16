@@ -1,10 +1,10 @@
 print("Welcome to my first game!")
 name = input("What is your name? \n")
-print("Hello,", name)
 age = int(input("What is your age? \n"))
+health = 5
 
 if age >=13 and age <= 80:
-  print("Great!")
+  print("Welcome", name, ", you start with 10 health. Make sure to choose wisely!")
 
   cont = input("Do you want to continue(y/N)? \n").lower()
   if cont == "y":
@@ -18,17 +18,19 @@ if age >=13 and age <= 80:
         print("The gatekeeper's allow you in, but warns you not to wander after 11:00 PM.")
         q1 = print("You enter and find a crowd gathered around in the distance, Do you want to investigate(y/N)?")
 
-        if q1 == 'y':
+      elif ch2 == 'b':
+        health -= 5
+        ch2 = input("You found a back alley door to the City of Holkn. You sneak in and you accidently step on a glass bottle. You lose 5 health.")
 
-    elif ch1 == 'b':
-      ch2 = input("You found a back alley door to the City of Holkn. You sneak in and you find a drunk watching you. Do you ignore(a) or talk(b)?\n")
-
+        if health<=0:
+          print("\nYou lost all your health, you have chosen death.")
+          
     else :
       print("You have chosen death.")
 
 else:
   print("Oops you need to be 13 or older.")
 
-print("\n\nGame still in development, Thank you for playing!")
+print("\nGame still in development, Thank you for playing!")
 
 
